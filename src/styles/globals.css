@@ -1,0 +1,59 @@
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FFB800;
+  --secondary: #00A3FF;
+  --accent: #FF4B4B;
+  --background: #0A0F1E;
+  --surface: #1A1F2E;
+  --surface-light: #2A2F3E;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white antialiased;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px var(--primary);
+  }
+
+  .shadow-neon {
+    box-shadow: 0 0 10px var(--primary);
+  }
+
+  .shadow-neon-blue {
+    box-shadow: 0 0 10px var(--secondary);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.hover-icon {
+  @apply transition-transform duration-200 ease-out;
+}
+
+.hover-icon:hover {
+  @apply scale-110;
+}
+
+.active-icon {
+  @apply text-primary;
+}
+```

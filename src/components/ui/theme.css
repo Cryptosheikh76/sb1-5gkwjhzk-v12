@@ -1,0 +1,14 @@
+/* Add to existing theme.css */
+.glow-stroke {
+  filter: drop-shadow(0 0 2px var(--neon-blue));
+}
+
+.active-icon {
+  filter: drop-shadow(0 0 4px var(--primary));
+  stroke: var(--primary);
+}
+
+.hover-icon:hover {
+  filter: drop-shadow(0 0 3px var(--neon-blue));
+  stroke: white;
+}
